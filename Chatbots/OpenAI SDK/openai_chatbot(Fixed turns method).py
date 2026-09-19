@@ -1,10 +1,12 @@
 from openai import OpenAI
 import time
+from pathlib import Path
 
 REQUESTY_API_KEY = "<key>"
 MAX_RETRIES = 3
 MAX_MESSAGE_LIMIT = 3
 
+root_path = Path(__file__).parent
 
 client = OpenAI(
     #base_url="https://openrouter.ai/api/v1",
@@ -31,6 +33,7 @@ if __name__ == "__main__":
 
     print("--- Chatbot Initialized (type 'quit' or 'exit' to stop) ---")
 
+    terminate = False
     while True:
         # 1. Get user input
         user_input = input("\nUser: ").strip()
@@ -83,6 +86,18 @@ if __name__ == "__main__":
 
             except Exception as e:
                 print(f"Error: {e}")
+                status_code = getattr(e, "status_code", None)
+                if status_code and status_code == 403:
+                    terminate = True
+                    print("[Not authorized]")
+                    break
+
+                if status_code and status_code == 400:
+                    terminate = True
+                    print("[Invalid request format]")
+                    break
+
+
                 if has_generated:
                     request_failed = True
                     print("[Response interrupted]")
@@ -95,8 +110,11 @@ if __name__ == "__main__":
                 else:
                     request_failed = True
                     print("[Request failed]")
-            
-        if request_failed == True:
+    
+        if terminate:
+            messages.pop()
+            break
+        if request_failed:
             messages.pop()
 
     print(messages)

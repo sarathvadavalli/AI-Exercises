@@ -1,0 +1,22 @@
+[
+    {
+        "role": "system",
+        "content": "You are a helpful programming assistant."
+    },
+    {
+        "role": "user",
+        "content": "Hello my name is sarath"
+    },
+    {
+        "role": "assistant",
+        "content": "Hello Sarath! It's nice to meet you. \n\nI am your programming assistant. Whether you need help debugging code, learning a new language, designing an architecture, or just have a general technical question, I'm here to help.\n\nWhat are you working on today?"
+    },
+    {
+        "role": "user",
+        "content": "Give me a list of 2 products with each product having 4 fields id,name,category,price in json format.Ouput only json"
+    },
+    {
+        "role": "assistant",
+        "content": "```json\n[\n  {\n    \"id\": 1,\n    \"name\": \"Wireless Mouse\",\n    \"category\": \"Electronics\",\n    \"price\": 25.99\n  },\n  {\n    \"id\": 2,\n    \"name\": \"Yoga Mat\",\n    \"category\": \"Fitness\",\n    \"price\": 19.50\n  }\n]\n```"
+    }
+]

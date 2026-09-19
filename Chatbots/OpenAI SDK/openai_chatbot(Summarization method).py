@@ -1,7 +1,9 @@
 from openai import OpenAI
 import time, json
+from pathlib import Path
 
-REQUESTY_API_KEY = "<key>"
+# REQUESTY_API_KEY = "<key>"
+REQUESTY_API_KEY = "rqsty-sk-115c9lZGRyCpyoqpcnzrjQOMs8yN0alSBmC5AyP2eTWGnUpbDvTQOke1DtLA52Pj7X7sUVokQuPSuB+tGKI8iGyqvqQ1/akk84CoqFC/FQY="
 MAX_RETRIES = 3
 CONTEXT_LIMIT = 70
 SYSTEM_PROMPT_TOKENS = 6
@@ -9,6 +11,7 @@ SUMMARY_LIMIT = 24
 OUTPUT_LIMIT = 20
 TARGET_TOKENS = CONTEXT_LIMIT - (SYSTEM_PROMPT_TOKENS + SUMMARY_LIMIT + OUTPUT_LIMIT)
 
+root_path = Path(__file__).parent
 
 client = OpenAI(
     #base_url="https://openrouter.ai/api/v1",
@@ -58,7 +61,7 @@ if __name__ == "__main__":
     # Initialize conversation history list with syatem instructions
     system_instructions = "You are a helpful programming assistant."
     running_summary = ""
-    messages = []
+    messages = [system_instructions]
     history = [{
             "role": "system",
             "content": system_instructions
@@ -67,6 +70,7 @@ if __name__ == "__main__":
     print("--- Chatbot Initialized (type 'quit' or 'exit' to stop) ---")
 
     total_tokens = 0
+    terminate = False
     while True:
         # Get user input
         user_input = input("\nUser: ").strip()
@@ -157,6 +161,17 @@ if __name__ == "__main__":
 
             except Exception as e:
                 print(f"Error: {e}")
+                status_code = getattr(e, "status_code", None)
+                if status_code and status_code == 403:
+                    terminate = True
+                    print("[Not authorized]")
+                    break
+                
+                if status_code and status_code == 400:
+                    terminate = True
+                    print("[Invalid request format]")
+                    break
+
                 if has_generated:
                     request_failed = True
                     print("[Response interrupted]")
@@ -169,13 +184,18 @@ if __name__ == "__main__":
                 else:
                     request_failed = True
                     print("[Request failed]")
-            
-        if request_failed == True:
+
+        if terminate:
+            messages.pop()
+            history.pop()
+            break
+        if request_failed:
             messages.pop()
             history.pop()
 
-    with open('openai_chatbot_history2.json', 'w') as f:
-        json.dump(history, f, indent=4)
-        print("Chat history successfully saved.")
+    if not no_access:
+        with open(f'{root_path}/openai_chatbot_history2.json', 'w') as f:
+            json.dump(history, f, indent=4)
+            print("Chat history successfully saved.")
 
     # Generated summary: The user introduced himself as Sarath. The assistant identified itself as a programming assistant.

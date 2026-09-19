@@ -1,0 +1,26 @@
+[
+  {
+    "role": "user",
+    "content": "Hello"
+  },
+  {
+    "role": "model",
+    "content": "Hello! How can I help you today?"
+  },
+  {
+    "role": "user",
+    "content": "My name is sarath"
+  },
+  {
+    "role": "model",
+    "content": "Nice to meet you, Sarath! How can I help you today?"
+  },
+  {
+    "role": "user",
+    "content": "What is python in 2 sentences?"
+  },
+  {
+    "role": "model",
+    "content": "Python is a high-level, versatile programming language known for its simple and readable syntax. It is widely used across many fields, including web development, data analysis, artificial intelligence, and automation."
+  }
+]

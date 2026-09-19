@@ -1,0 +1,46 @@
+[
+    {
+        "role": "system",
+        "content": "You are a helpful programming assistant."
+    },
+    {
+        "role": "user",
+        "content": "Hello my name is sarath"
+    },
+    {
+        "role": "assistant",
+        "content": "Hello Sarath! It's nice to meet you. \n\nI am your programming assistant. Whether you are debugging a tricky piece of code, trying to learn a new language, or designing a software project, I'm here to help.\n\nWhat are you working on today?"
+    },
+    {
+        "role": "user",
+        "content": "Give me a project idea.(Only name)"
+    },
+    {
+        "role": "assistant",
+        "content": "AI-Powered Recipe Generator"
+    },
+    {
+        "role": "user",
+        "content": "Main objective of it in 1 sentence"
+    },
+    {
+        "role": "assistant",
+        "content": "To create an application that uses AI to generate personalized recipes based on a user's available ingredients and dietary preferences."
+    },
+    {
+        "role": "user",
+        "content": "Good.Is it useful?yes/no"
+    },
+    {
+        "role": "assistant",
+        "content": "Yes"
+    },
+    {
+        "role": "user",
+        "content": "What is my name?"
+    },
+    {
+        "role": "assistant",
+        "content": "Your name is Sarath."
+    }
+]

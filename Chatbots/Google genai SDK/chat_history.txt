@@ -1,0 +1,88 @@
+[UserContent(
+  parts=[
+    Part(
+      text='Hello'
+    ),
+  ],
+  role='user'
+), Content(
+  parts=[
+    Part(
+      text='Hello! How can I help you today'
+    ),
+  ],
+  role='model'
+), Content(
+  parts=[
+    Part(
+      text='?'
+    ),
+  ],
+  role='model'
+), Content(
+  parts=[
+    Part(
+      text='',
+      thought_signature=b'\x12\xa5\x06\n\xa2\x06\x01i\x14}\x13\xc8\xf8\x0c\xd3\xec\r\x1a\xc5\xa9\xff\xfd\xa0K\x19\xcd$\xc3Q\xf0\x10\xc1qg\xf87\xce\xea\x1b\xfeQ~<\xcdz\xf8)\x0c\xe2$\x82\x952F\xfc~i\x0b\xb8p5\xe4\x19\xd7\x1e\xd1\xf6n\x86\xd3\x17&\xf9\xf4\x98\xe5\xb0\xd7aZ\xfc\xd8\x11?\xe2Mc\x90\x14\x98\xad\xb76\x18\x96\x0e\xae...'
+    ),
+  ],
+  role='model'
+), UserContent(
+  parts=[
+    Part(
+      text='My name is sarath'
+    ),
+  ],
+  role='user'
+), Content(
+  parts=[
+    Part(
+      text='Nice to meet you, Sarath! How can I help you today?'
+    ),
+  ],
+  role='model'
+), Content(
+  parts=[
+    Part(
+      text='',
+      thought_signature=b'\x12\xca\x07\n\xc7\x07\x01i\x14}\x13\xbc\x07\x07m\xba\xba\x86J\xedf\xbd\xca\xdc2sS\x95<[A\xc8\x81\x87\x87\xc7\xf5E\xe5\x0e\x06]\xe1$\x93H|\x0c[\xe3\x0b^^q\xa4\x83\xf9\xf8\x1e;->M\xe5r\xd0Y%\xf4\xf6\xf9i\xcc\xa4v[\x83\x10\xa4\xd1S>\x7f?U\xf5Kp\xa0\\\x957\xf6\xd4*\xe6\x99...'
+    ),
+  ],
+  role='model'
+), UserContent(
+  parts=[
+    Part(
+      text='What is python in 2 sentences?'
+    ),
+  ],
+  role='user'
+), Content(
+  parts=[
+    Part(
+      text='Python is a high-level, versatile programming language'
+    ),
+  ],
+  role='model'
+), Content(
+  parts=[
+    Part(
+      text=' known for its simple and readable syntax. It is widely used across many fields, including web development, data analysis, artificial'
+    ),
+  ],
+  role='model'
+), Content(
+  parts=[
+    Part(
+      text=' intelligence, and automation.'
+    ),
+  ],
+  role='model'
+), Content(
+  parts=[
+    Part(
+      text='',
+      thought_signature=b"\x12\xda\x10\n\xd7\x10\x01i\x14}\x13<f\x0f\xb6c\xe6\xe8\xccZ\x1bY\xe7\x86\xbd\x9a\xa1d\x17t\xdaO)\xedc@\xda\xa6\xa9\xb1\xab \xc96\xe79\xd5\xe0\xd3Tt9^\x88\x14#\xb6\xf1j\x13%a\x05\xb2\xaa\xd4\xb8\xfd3\xc3\xc2\xb22E'=\xef\t\xf87\x158,6\x0c\xc7\xb9\x92y\xd9i\xf4\xdeh\xe6W\x8c...'
+    ),
+  ],
+  role='model'
+)]

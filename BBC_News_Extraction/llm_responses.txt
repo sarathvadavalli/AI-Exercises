@@ -160,3 +160,28 @@ The provided text discusses the following social issues:
 *   **Educational Inequality:** There are entrenched divisions regarding university access, with teenagers from wealthy backgrounds being six times more likely to attend university than those from the most deprived areas. This is linked to issues of aspiration and secondary education standards in disadvantaged communities. (Source: student inequality exposed)
 
 ---------------------------------------------------------------------------------------------
+Qn: What are Musk's views on AI and government regulations?
+Ans:
+The provided context does not contain information regarding Musk's views on AI and government regulations.
+
+---------------------------------------------------------------------------------------------
+
+Qn: What steps are taken to reduce spam emails?
+Ans:
+Based on the provided text, the following steps are taken to reduce spam emails:
+
+*   **Consumer-level protections:** Users are encouraged to use a combination of sound judgement, spyware detection software, and spam filters.
+*   **Industry and media efforts:** Both the media and industry have worked to raise awareness regarding illegitimate emails to reduce nuisance and financial damage from spoof websites and phishing attacks.
+*   **Blacklisting and blocking:** 
+    *   Spamhaus blocks junk messages by collecting and circulating blacklists of net addresses known to harbor infected machines.
+    *   Organizations such as Spamcop generate real-time blacklists of sites that sell spam goods.
+*   **Technical filtering:** Symantec's subsidiary, Brightmail, utilizes filtering techniques that do not rely on net addresses, such as filtering out email messages that contain web links.
+*   **Increasing spammers' costs:** Lycos developed a screensaver that endlessly requests data from sites selling goods and services mentioned in spam emails. This is intended to slow down the sites' response times and significantly increase the spammers' monthly bandwidth bills, making spamming more expensive. Lycos has also previously built spam filtering systems for its users.
+
+**Supporting Evidence:**
+*   **spam emails tempt net shoppers:** Mentions industry/media awareness and the use of spam filters, spyware detection software, and sound judgement.
+*   **warnings about junk mail deluge:** Mentions Spamhaus's use of blacklists and Brightmail's technique of filtering emails with web links.
+*   **screensaver tackles spam websites:** Mentions Lycos's screensaver (and its use of Spamcop blacklists) to increase bandwidth costs and slow down sites, as well as Lycos's previous spam filtering systems.
+
+---------------------------------------------------------------------------------------------
+

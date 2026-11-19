@@ -1,0 +1,15 @@
+[theme]
+base = "dark"
+primaryColor = "#2563EB"
+backgroundColor = "rgb(247 224 199)"
+secondaryBackgroundColor = "#FFFFFF"
+textColor = "#0F172A"
+borderColor = "#424446"
+linkColor = "#2563EB"
+font = "sans-serif"
+headingFont = "sans-serif"
+baseFontSize = 15
+baseRadius = "12px"
+buttonRadius = "10px"
+showWidgetBorder = true
+showSidebarBorder = true
